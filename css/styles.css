@@ -164,7 +164,7 @@ main #sinners-reference iframe.youtube {
   /*---(All Pages - Semi-Wide)---*/
   header #main-nav div.container {
     display: revert;
-    text-align: revert;
+    text-align: center;
     padding: 0;
     width: 690px;
     margin: 0 auto;
@@ -181,12 +181,12 @@ main #sinners-reference iframe.youtube {
     display: revert;
     width: revert;
     float: left;
-    margin: 0px 12px;
+    margin: 6px 12px;
   }
 
   header #main-nav ul li a {
     text-align: center;
-    width: 200px;
+    width: 321px;
   }
   
   .page-wrapper {
@@ -289,7 +289,7 @@ main #sinners-reference iframe.youtube {
     display: revert;
     text-align: revert;
     padding: 0;
-    width: 690px;
+    width: 1104px;
     margin: 0 auto;
   }
 
@@ -309,7 +309,7 @@ main #sinners-reference iframe.youtube {
 
   header #main-nav ul li a {
     text-align: center;
-    width: 200px;
+    width: 252px;
   }
   
   .page-wrapper {
