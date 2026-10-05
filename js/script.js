@@ -7,7 +7,7 @@ async function init() {
     // Create a new map from the div with id="map".
     map = new Map(document.getElementById('map'), {
         center: { lat: 48.874, lng: 2.295 },
-        zoom: 18,
+        zoom: 17,
         renderingType: 'VECTOR',
         colorScheme: ColorScheme.DARK,
     });
