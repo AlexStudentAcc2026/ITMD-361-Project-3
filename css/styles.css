@@ -159,9 +159,132 @@ main #sinners-reference iframe.youtube {
   margin: 0px 20px 0px 0px;
 }
 /*------------------------------(Page 2 Specific - Resume)-----------------------------*/
-/*------------------------------(Wide Screen)------------------------------------------*/
+/*------------------------------(Semi-Wide Screen)-------------------------------------*/
 @media (min-width: 800px) {
-  /*------------------------------(All Pages)/*------------------------------*/
+  /*---(All Pages - Semi-Wide)---*/
+  header #main-nav div.container {
+    display: revert;
+    text-align: revert;
+    padding: 0;
+    width: 690px;
+    margin: 0 auto;
+  }
+
+  header #main-nav ul {
+    text-align:  revert;
+    margin: 24px 0px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  header #main-nav ul li {
+    display: revert;
+    width: revert;
+    float: left;
+    margin: 0px 12px;
+  }
+
+  header #main-nav ul li a {
+    text-align: center;
+    width: 200px;
+  }
+  
+  .page-wrapper {
+    width: 700px;
+    padding: 0 50px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  div.grid {
+    all: revert;
+  }
+  
+  footer {
+    width: 700px;
+    margin: 0 auto;
+    padding: 2px 50px;
+  }
+  /*---(All Pages - Semi-Wide)---*/
+  /*---(Page 1 - Semi-Wide)------*/
+  aside img.mobile-background-left, aside img.mobile-background-right {
+    display: none;
+  }
+  
+  .grid {
+    all: revert;
+  }
+  
+  main {
+    width: 800px;
+  }
+
+  body#homepage::before, body#homepage::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: calc((100% - 700px) / 2);
+    background-color: red;
+    background-image: url("../images/sinners.jpg");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+
+    z-index: -1;
+  }
+
+  body#homepage::before {
+    left: 0;
+    background-position: right top;
+  }
+
+  body#homepage::after {
+    right: 0;
+    background-position: left top;
+  }
+  
+  main div#cats {
+    font-size: 1.375rem;
+    width: 700px;
+  }
+
+  main div#cats div.container {
+    text-align: revert;
+    float: left;
+    width: 350px;
+  }
+  
+  main div#cats img {
+    display: block;
+    width: 280px;
+  }
+
+  main div#sinners-reference p {
+    width: 80%;
+  }
+  /*---(Page 1 - Semi-Wide)------*/
+  /*---(Page 2 - Semi-Wide)------*/
+  .education-box p {
+    margin: 10px;
+  }
+
+  .certificate-box {
+    margin: revert;
+    display: block;
+    height: 100px;
+  }
+
+  .cert-image {
+    height: 90px;
+    width: 90px;
+
+  }
+  /*---(Page 2 - Semi-Wide)------*/
+}
+/*------------------------------(Semi-Wide Screen)-------------------------------------*/
+/*------------------------------(Wide Screen)------------------------------------------*/
+@media (min-width: 1280px) {
+  /*---(All Pages - Wide)---*/
   header #main-nav div.container {
     display: revert;
     text-align: revert;
@@ -205,8 +328,8 @@ main #sinners-reference iframe.youtube {
     margin: 0 auto;
     padding: 2px 100px;
   }
-  /*------------------------------(All Pages)/*------------------------------*/
-  /*------------------------------(Page 1)-----------------------------------*/
+  /*---(All Pages - Wide)---*/
+  /*---(Page 1 - Wide)------*/
   aside img.mobile-background-left, aside img.mobile-background-right {
     display: none;
   }
@@ -262,8 +385,8 @@ main #sinners-reference iframe.youtube {
   main div#sinners-reference p {
     width: 80%;
   }
-  /*------------------------------(Page 1)-----------------------------------*/
-  /*------------------------------(Page 2)-----------------------------------*/
+  /*---(Page 1 - Wide)------*/
+  /*---(Page 2 - Wide)------*/
   .education-box p {
     margin: 10px;
   }
@@ -279,6 +402,6 @@ main #sinners-reference iframe.youtube {
     width: 90px;
 
   }
-  /*------------------------------(Page 2)-----------------------------------*/
+  /*---(Page 2 - Wide)------*/
 }
 /*------------------------------(Wide Screen)------------------------------------------*/
