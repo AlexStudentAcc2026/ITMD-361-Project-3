@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gidole&family=New+Rocker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <title>ITMD-361 Project 2</title>
+  </head>
+  <body class="gidole-regular">
+    <header>
+      <nav id="main-nav">
+      <div class="container">
+        <ul>
+          <li><a href="index.html">Homepage</a></li>
+          <li class="middle-button"><a href="page2.html">Resume</a></li>
+          <li><a href="page3.html">Web Vulnerabilities</a></li>
+        </ul>
+      </div>
+      </nav>
+    </header>
+    <main id="main-content">
+      <div class="page-wrapper">
+        <h1>Three basic web vulnerability examples from the OWASP TOP 10</h1>
+        <p>In computer security, a <a target="_blank" rel="noopener noreferrer" href="https://en.wikipedia.org/wiki/Vulnerability_(computer_security)">vulnerability</a> is a flaw or weakness in a system's design, implementation, or management that can be exploited by a malicious actor to compromise its security.</p>
+        <div class="vulnerability-div">
+          <h2>1. Insecure Direct Object Reference (IDOR)</h2>
+          <p>Web applications frequently use predictable values to reference objects. For example, a URL like /api/users/123/profile uses the ID 123 to look up a specific user record. When the application does not verify that the authenticated user is authorized to access that particular record, an attacker can simply change 123 to 124 to view or modify another user’s data.</p>
+          <ul>
+            <li><strong>URL Path Parameters: </strong>/invoices/1042 changed to /invoices/1043</li>
+            <li><strong>Query String Parameters: </strong>?order_id=7001 changed to ?order_id=7002</li>
+            <li><strong>File References: </strong>?file=report_user1.pdf changed to ?file=report_user2.pdf</li>
+          </ul>
+          <p>Fun Fact: A similar vulnerability exists in OWASP API TOP 10 called BOLA.</p>
+          <p>IDOR is classified under Broken Access Control (A01:2025) in the OWASP Top 10.</p>
+          <p>Read more about IDOR: <a target="_blank" rel="noopener noreferrer" href="https://owasp.org/www-community/attacks/insecure_direct_object_reference">https://owasp.org/www-community/attacks/insecure_direct_object_reference</a></p>
+        </div>
+        <div class="vulnerability-div">
+          <h2>2. Path Traversal</h2>
+          <p>A path traversal attack (also known as directory traversal) aims to access files and directories that are stored outside the web root folder. By manipulating variables that reference files with “dot-dot-slash (../)” sequences and its variations or by using absolute file paths, it may be possible to access arbitrary files and directories stored on file system including application source code or configuration and critical system files.</p>
+          <p>All but the most simple web applications have to include local resources, such as images, themes, other scripts, and so on. Every time a resource or file is included by the application, there is a risk that an attacker may be able to include a file or remote resource you didn’t authorize.</p>
+          <p>The following URLs show examples of *NIX password file exploitation.</p>
+          <ul>
+            <li>http://some_site.com.br/../../../../etc/shadow</li>
+            <li>http://some_site.com.br/get-files?file=/etc/passwd</li>
+          </ul>
+          <p>Path Traversal is classified under Broken Access Control (A01:2025) in the OWASP Top 10.</p>
+          <p>Read more about Path Traversal: <a target="_blank" rel="noopener noreferrer" href="https://owasp.org/www-community/attacks/Path_Traversal">https://owasp.org/www-community/attacks/Path_Traversal</a></p>
+        </div>
+        <div class="vulnerability-div">
+          <h2>3. Cross-Site Request Forgery (CSRF)</h2>
+          <p>Cross-Site Request Forgery (CSRF) is an attack that forces an end user to execute unwanted actions on a web application in which they’re currently authenticated. With a little help of social engineering (such as sending a link via email or chat), an attacker may trick the users of a web application into executing actions of the attacker’s choosing. If the victim is a normal user, a successful CSRF attack can force the user to perform state changing requests like transferring funds, changing their email address, and so forth. If the victim is an administrative account, CSRF can compromise the entire web application..</p>
+          <p>The following URLs show examples of HTTP GET method scenarios.</p>
+          <ul>
+            <li>https://netflix.com/change-email?new-email=hacker@takeover.com</li>
+            <li>https://smart-bank.com/transfer?amount=1000&amp;recipient=hacker</li>
+          </ul>
+          <p>CSRF is classified under Broken Access Control (A01:2025) in the OWASP Top 10.</p>
+          <p>Read more about CSRF: <a target="_blank" rel="noopener noreferrer" href="https://owasp.org/www-community/attacks/csrf">https://owasp.org/www-community/attacks/csrf</a></p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>ITMD-361 Project 2 - Web Vulnerabilities</p>
+    </footer>
+  </body>
+</html>

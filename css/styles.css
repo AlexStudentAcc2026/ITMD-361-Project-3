@@ -1,0 +1,284 @@
+/*------------------------------(Fonts)------------------------------------------------*/
+.gidole-regular {
+  font-family: Gidole, Arial; /* Added an actual font as backup */
+  font-weight: 400;
+  font-style: normal;
+}
+
+.new-rocker-regular {
+  font-family: New Rocker, Georgia; /* Added an actual font as backup */
+  font-weight: 400;
+  font-style: normal;
+}
+/*------------------------------(Fonts)------------------------------------------------*/
+/*------------------------------(All Pages)--------------------------------------------*/
+header #main-nav {
+  display: block;
+  background-color: black;
+}
+header #main-nav div.container {
+  width: 84%;
+  padding: 32px 0;
+  margin: 0 auto;
+}
+
+header #main-nav ul {
+  padding: 0;
+  margin: 0 auto;
+  list-style-type: none;
+  text-align: center;
+}
+
+header #main-nav ul li {
+  display: inline-block;
+  width: 100%;
+  margin: 8px 0;
+}
+
+header #main-nav ul li a {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  background-color: blue;
+  padding: 10px 0px 8px 0px;
+  border-radius: 4px;
+}
+
+.page-wrapper {
+  width: 84%;
+  margin: 0 auto;
+}
+
+main {
+  background-color: white;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+footer {
+  display: block;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  overflow: hidden;
+}
+/*------------------------------(All Pages)--------------------------------------------*/
+/*------------------------------(Page 1 Specific - Homepage)---------------------------*/
+div.grid {
+  display: grid;
+  grid-template-columns: 2% 84% 2%;
+  column-gap: 6%;
+  align-items: stretch
+}
+
+aside {
+  height: 100%;
+}
+
+aside img.mobile-background-right, aside img.mobile-background-left {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+main #cats {
+  display: block;
+  font-size: 1.25rem;
+  overflow: hidden;
+}
+
+main #cats div.container {
+  display: block;
+  width: 60%;
+  overflow: hidden;
+  text-align:center;
+  margin: 10px auto;
+}
+
+main #cats img {
+  display: block;
+  width: 100%;
+}
+
+main #sinners-reference {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
+
+main #sinners-reference p {
+  display: block;
+  width: 80%;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.25rem;
+  vertical-align: center;
+}
+
+main #sinners-reference iframe.youtube {
+  width: 100%;
+  display: block;
+  margin: 0px auto 20px auto;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+/*------------------------------(Page 1 Specific - Homepage)---------------------------*/
+/*------------------------------(Page 2 Specific - Resume)-----------------------------*/
+.education-box p {
+  margin: 10px 0; /* might need fixing, will check later */
+}
+
+.comment {
+  color: rgb(0 0 0 / 0.5);
+  font-size: 0.875rem;
+}
+
+.institution {
+  color: blue;
+  font-weight: bold;
+  font-size: 1.125rem;
+  margin: 0px 0px 0px 0px;
+}
+
+.certificate-box {
+  display: flow-root;
+  margin: 20px auto;
+}
+
+.certificate-box p {
+  margin: 5px 0;
+}
+
+.cert-image {
+  height: auto;
+  width: 20%;
+  float: left;
+  margin: 0px 20px 0px 0px;
+}
+/*------------------------------(Page 2 Specific - Resume)-----------------------------*/
+/*------------------------------(Wide Screen)------------------------------------------*/
+@media (min-width: 800px) {
+  /*------------------------------(All Pages)/*------------------------------*/
+  header #main-nav div.container {
+    display: revert;
+    text-align: revert;
+    padding: 0;
+    width: 690px;
+    margin: 0 auto;
+  }
+
+  header #main-nav ul {
+    text-align:  revert;
+    margin: 24px 0px;
+    display: inline-block;
+    vertical-align: top;
+  }
+
+  header #main-nav ul li {
+    display: revert;
+    width: revert;
+    float: left;
+    margin: 0px 12px;
+  }
+
+  header #main-nav ul li a {
+    text-align: center;
+    width: 200px;
+  }
+  
+  .page-wrapper {
+    width: 1080px;
+    padding: 0 100px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  div.grid {
+    all: revert;
+  }
+  
+  footer {
+    width: 1080px;
+    margin: 0 auto;
+    padding: 2px 100px;
+  }
+  /*------------------------------(All Pages)/*------------------------------*/
+  /*------------------------------(Page 1)-----------------------------------*/
+  aside img.mobile-background-left, aside img.mobile-background-right {
+    display: none;
+  }
+  
+  .grid {
+    all: revert;
+  }
+  
+  main {
+    width: 1280px;
+  }
+
+  body#homepage::before, body#homepage::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: calc((100% - 1080px) / 2);
+    background-color: red;
+    background-image: url("../images/sinners.jpg");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+
+    z-index: -1;
+  }
+
+  body#homepage::before {
+    left: 0;
+    background-position: right top;
+  }
+
+  body#homepage::after {
+    right: 0;
+    background-position: left top;
+  }
+  
+  main div#cats {
+    font-size: 1.375rem;
+    width: 1080px;
+  }
+
+  main div#cats div.container {
+    text-align: revert;
+    float: left;
+    width: 360px;
+  }
+  
+  main div#cats img {
+    display: block;
+    width: 280px;
+  }
+
+  main div#sinners-reference p {
+    width: 80%;
+  }
+  /*------------------------------(Page 1)-----------------------------------*/
+  /*------------------------------(Page 2)-----------------------------------*/
+  .education-box p {
+    margin: 10px;
+  }
+
+  .certificate-box {
+    margin: revert;
+    display: block;
+    height: 100px;
+  }
+
+  .cert-image {
+    height: 90px;
+    width: 90px;
+
+  }
+  /*------------------------------(Page 2)-----------------------------------*/
+}
+/*------------------------------(Wide Screen)------------------------------------------*/
