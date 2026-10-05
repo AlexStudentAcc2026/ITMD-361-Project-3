@@ -1,16 +1,14 @@
-let map;
+// As per Google's docs: The gmp-map element is the preferred way to add a Google map to a web page.
 async function init() {
-    // Import the needed libraries
-    const { Map } = await google.maps.importLibrary('maps');
+    // Import the needed libraries.
+    await google.maps.importLibrary('maps');
 
-    // Create a new map from the div with id="map".
-    map = new Map(document.getElementById('map'), {
-        center: { lat: -37.8720905, lng: 175.6829096 },
-        zoom: 12,
-        renderingType: 'VECTOR',
-    });
+    // Access the map.
+    const mapElement = document.querySelector('gmp-map');
+    // Access the underlying map object.
+    const innerMap = mapElement.innerMap;
 
-    console.log(map);
+    console.log({ mapElement, innerMap });
 }
 
 void init();
